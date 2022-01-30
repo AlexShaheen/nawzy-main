@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set</title>
+        <link rel="stylesheet" href = "./main.css">
+        <script src="frontendhandler.js"></script>
+    </head>
+    <body>
+        <div id = "app">
+            <div id = "title-line">
+                Game of Set
+            </div>
+            <div>
+                <table class = "menu">
+                    <tr class = "menu-row">
+                        <td><button><a href = "https://en.wikipedia.org/wiki/Set_(card_game)">Rules</a></button></td>
+                        <td><button type="button" value="newgame" onclick="newGame();">New Game</button></td> 
+                        <td><button type="button" value="hint" onclick="Hint();">Hint?</button></td> 
+                        <td><button type="button" value="singleplayer" onclick="singlePlayer();">Single Player</button></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div>
+                <button id = "player-one-draw" class = "button" onclick="addCardsP1()";>
+                Player 1: More Cards
+            </button>
+            <button id = "player-two-draw" class = "button" onclick="addCardsP2()";">
+                Player 2: More Cards
+            </button>
+            </div>
+            
+            <div class = "tables-div">
+                
+                <table class = "card-table">
+                    <tr class = "card-table-row">
+                        
+                        <td class = "card"><img src = "dog.jpg" id = "slot0" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot1" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot2" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot3" width="100" height="150";></td>
+                    </tr>
+                    <tr class = "card-table-row">
+                        <td class = "card"><img src = "dog.jpg" id = "slot4" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot5" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot6" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot7" width="100" height="150";></td>
+                    </tr>
+                    <tr class = "card-table-row">
+                        <td class = "card"><img src = "dog.jpg" id = "slot8" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot9" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot10" width="100" height="150";></td>
+                        <td class = "card"><img src = "dog.jpg" id = "slot11" width="100" height="150";></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <button id = "player-one-turn" class = "button" onclick="checkSetP1()">
+                Player 1 Found a Set
+            </button>
+            <button id = "player-two-turn" class = "button" onclick="checkSetP2()">
+                Player 2 Found a Set
+            </button>
+            <div class = "score-bar">
+                Player 1 Sets ___            Player 2 Sets ___
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
